@@ -1,0 +1,50 @@
+body{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+button {
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #560bad;
+    transition: color 0.5s;
+    z-index: 1;
+    font-size: 30px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: #560bad;
+    cursor: pointer;
+    padding: 20px 30px;
+}
+
+button:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: #560bad;
+  height: 200px;
+  width: 600px;
+  border-radius: 50%;
+}
+
+button:hover {
+    color: #fff;
+}
+
+button:before {
+    top: 100%;
+    left: 100%;
+    transition: all 0.7s;
+}
+
+button:hover:before {
+    top: -60px;
+    left: -60px;
+}
+
+button:active:before {
+    background: #3a0ca3;
+    transition: background 0s;
+}
